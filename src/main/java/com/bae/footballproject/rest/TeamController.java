@@ -30,9 +30,9 @@ public class TeamController {
 		return new ResponseEntity<Team>(this.service.createTeam(team), HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/getTeam")
-	public ResponseEntity<List<Team>> getTeam() {
-		return ResponseEntity.ok(this.service.getTeam());
+	@GetMapping("/getTeams")
+	public ResponseEntity<List<Team>> getTeams() {
+		return ResponseEntity.ok(this.service.getTeams());
 	}
 	
 	@GetMapping("/getTeam/{id}")

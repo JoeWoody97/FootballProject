@@ -14,6 +14,6 @@ public interface TeamService {
 
 	boolean deleteTeamById(Long id);
 
-	List<Team> getTeam();
+	List<Team> getTeams();
 
 }
