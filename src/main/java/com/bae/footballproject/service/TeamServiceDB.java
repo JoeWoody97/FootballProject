@@ -25,7 +25,7 @@ public class TeamServiceDB implements TeamService {
 	}
 	
 	@Override
-	public List<Team> getTeam() {
+	public List<Team> getTeams() {
 		return this.repo.findAll();
 	}
 
