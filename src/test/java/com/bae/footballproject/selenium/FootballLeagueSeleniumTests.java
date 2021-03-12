@@ -45,7 +45,7 @@ public class FootballLeagueSeleniumTests {
 		
 		WebElement title = this.driver.findElement(By.xpath("/html/body/nav/div/a"));
 		
-		assertThat(title.getText()).isEqualTo("5 a-side Football Team Table");
+		assertThat(title.getText()).isEqualTo("5 a-side Football");
 	}
 	
 	@Test
