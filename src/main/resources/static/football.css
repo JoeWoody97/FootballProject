@@ -1,0 +1,28 @@
+.icon {
+    cursor: pointer;
+}
+/* 
+.actionColumn {
+    width: 5%;
+} */
+
+/* .teamFormContainer {
+    width: fit-content;
+} */
+
+.trash {
+    margin-right: 20px;
+}
+
+.pageContainer {
+    margin-top: 1%;
+}
+
+.wireframe {
+    border: 1px solid black;
+}
+
+.row-wireframe {
+    border: 1px solid black;
+    height: 400px
+}
