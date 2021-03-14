@@ -4,13 +4,17 @@ This is the README for my Football Project. It is a CRUD (Create, Read, Update a
 
 This README will give a detailed overview of the project including the research and development.
 
-# 5-a-side Football
-
  ## Author and Acknowlegements
 
 Project by Joseph Woodward
 
 I'd like to say thank you the QA Trainers for helping me to complete this project.
+
+## Links
+
+- [Presentation](https://docs.google.com/presentation/d/15gCtsKpkF-JWPq3MJJQaX6blx26is6Kq_m93TUEP6OQ/edit?usp=sharing)
+- [Jira Board](https://joewoodward.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=LT5)
+- [Front-end Github](https://github.com/JoeWoody97/FootballProjectFront)
 
 ## Contents
 
@@ -22,7 +26,6 @@ I'd like to say thank you the QA Trainers for helping me to complete this projec
     7. Testing
     8. Front-End
     9. Stretch Goals
-
 
 ## Resources
 
@@ -63,7 +66,7 @@ The Requirements set for this project are as below:
 
 ### My Approach
 
-To fulfil the requirements I have decided to create a 5-a-side football league table which will implement CRUD functionality. 
+To fulfill the requirements I have decided to create a 5-a-side football league table which will implement CRUD functionality. 
 
 A user will be able to:
 
@@ -102,7 +105,7 @@ My back-end is written in Java using the Spring framework. It also consists of m
 
 ***Front-end***
 
-My front-end is written in HTML, CSS and JS. I have used Bootstrap to help make the appearance of it look a lot cleaner and user friendly. 
+My front-end is written in HTML, CSS and JS. I have used Bootstrap to help make the appearance of it look a lot cleaner and user-friendly. 
 
 ## Testing
 
