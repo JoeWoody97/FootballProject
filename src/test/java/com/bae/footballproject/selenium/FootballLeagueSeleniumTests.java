@@ -13,8 +13,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -33,8 +31,6 @@ public class FootballLeagueSeleniumTests {
 	
 	private RemoteWebDriver driver;
 	
-	private WebDriverWait wait;
-	
 	@BeforeEach
 	void setup() {
 		ChromeOptions options = new ChromeOptions();
@@ -42,7 +38,6 @@ public class FootballLeagueSeleniumTests {
 		this.driver = new ChromeDriver();
 		this.driver.manage().window().maximize();
 		this.driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		this.wait = new WebDriverWait(driver, 5);
 	}
 	
 	@Test
