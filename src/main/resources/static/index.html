@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="football.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">5 a-side Football</a>
+        </div>
+    </nav>
+    <div class="container-fluid row justify-content-md-center pageContainer">
+        <div class="col-md-auto">
+            <table class="table table-bordered table-hover table-responsive">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Captain</th>
+                        <th scope="col">Kit Colour</th>
+                        <th scope="col">Size of Squad</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Contact Details</th>
+                        <th scope="col" class="actionColumn">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="output">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-auto teamFormContainer">
+            <section class="col-sm">
+                <form id="teamForm">
+                    <label for="teamName">Team Name:</label>
+                    <input name="name" id="teamName" class="form-control" autofocus>
+                    <label for="captain" class="form-label">Captain:</label>
+                    <input type="text" name="captain" id="captain" class="form-control" min="0">
+                    <label for="kitColour" class="form-label">Kit Colour:</label>
+                    <input type="text" name="kit" id="kitColour" class="form-control mb-2">
+                    <label for="squadSize" class="form-label">Squad Size:</label>
+                    <input type="text" name="squad" id="squadSize" class="form-control mb-2">
+                    <label for="location" class="form-label">Location:</label>
+                    <input type="text" name="location" id="location" class="form-control mb-2">
+                    <label for="contactDetails" class="form-label">Contact Details:</label>
+                    <input type="text" name="contact" id="contactDetails" class="form-control mb-2">
+                    <button type="reset" class="btn btn-dark">Reset</button>
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Team</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="teamUpdateForm">
+                        <label for="teamName">Team Name:</label>
+                        <input name="name" id="teamNameUpdate" class="form-control" autofocus>
+                        <label for="captain" class="form-label">Captain:</label>
+                        <input type="text" name="captain" id="captainUpdate" class="form-control" min="0">
+                        <label for="kitColour" class="form-label">Kit Colour:</label>
+                        <input type="text" name="kit" id="kitColourUpdate" class="form-control mb-2">
+                        <label for="squadSize" class="form-label">Squad size:</label>
+                        <input type="text" name="squad" id="squadSizeUpdate" class="form-control mb-2">
+                        <label for="location" class="form-label">Location:</label>
+                        <input type="text" name="location" id="locationUpdate" class="form-control mb-2">
+                        <label for="contactDetails" class="form-label">Contact details:</label>
+                        <input type="text" name="contact" id="contactDetailsUpdate" class="form-control mb-2">
+                        <button type="reset" class="btn btn-dark">Reset</button>
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac01e17894.js" crossorigin="anonymous"></script>
+    <script src="football.js"></script>
+</body>
+
+</html>
