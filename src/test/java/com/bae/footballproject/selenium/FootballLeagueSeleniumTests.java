@@ -1,6 +1,7 @@
 package com.bae.footballproject.selenium;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +13,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -30,6 +33,8 @@ public class FootballLeagueSeleniumTests {
 	
 	private RemoteWebDriver driver;
 	
+	private WebDriverWait wait;
+	
 	@BeforeEach
 	void setup() {
 		ChromeOptions options = new ChromeOptions();
@@ -37,6 +42,7 @@ public class FootballLeagueSeleniumTests {
 		this.driver = new ChromeDriver();
 		this.driver.manage().window().maximize();
 		this.driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		this.wait = new WebDriverWait(driver, 5);
 	}
 	
 	@Test
@@ -59,7 +65,7 @@ public class FootballLeagueSeleniumTests {
 	
 	
 	@Test
-	void testCreate() {
+	void testCreate() throws InterruptedException {
 		this.driver.get("http://localhost:" + port);
 		
 		WebElement nameInput = this.driver.findElementByXPath("//*[@id=\"teamName\"]");
@@ -82,10 +88,15 @@ public class FootballLeagueSeleniumTests {
 		
 		WebElement submitButton = this.driver.findElementByCssSelector("#teamForm > button:nth-child(14)");
 		submitButton.click();
+		
+		Thread.sleep(5000L);
+		
+		WebElement checkUpdated = this.driver.findElementByXPath("//*[@id=\"output\"]/tr[2]/td[5]");
+		assertEquals(checkUpdated.getText(), "Chinley");
 	}
 	
 	@Test
-	void updateTest() {
+	void updateTest() throws InterruptedException {
 		this.driver.get("http://localhost:" + port);
 		
 		WebElement updateButton = this.driver.findElementByCssSelector("#output > tr > td:nth-child(7) > i.fas.fa-edit.icon");
@@ -111,16 +122,26 @@ public class FootballLeagueSeleniumTests {
 		
 		WebElement submitButton = this.driver.findElementByXPath("//*[@id=\"teamUpdateForm\"]/button[2]");
 		submitButton.click();
+		
+		Thread.sleep(5000L);
+		
+		WebElement checkUpdated = this.driver.findElementByXPath("//*[@id=\"output\"]/tr[1]/td[2]");
+		assertEquals(checkUpdated.getText(), "Hannah");
 	}
 	
 	
 	@Test
-	void deleteTest() {
+	void deleteTest() throws InterruptedException {
 		
 		this.driver.get("http://localhost:" + port);
 		
 		WebElement deleteButton = this.driver.findElementByXPath("//*[@id=\"output\"]/tr[1]/td[7]/i[1]");
 		deleteButton.click();
+		
+		Thread.sleep(5000L);
+		
+		WebElement checkDeleted = this.driver.findElementById("output");
+		assertEquals(checkDeleted.getText(), "");
 	}
 
 	
