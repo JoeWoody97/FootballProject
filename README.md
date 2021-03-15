@@ -66,7 +66,7 @@ The Requirements set for this project are as below:
 
 ### My Approach
 
-To fulfill the requirements I have decided to create a 5-a-side football league table which will implement CRUD functionality. 
+To fulfill the requirements I have decided to create a 5-a-side football app which will implement CRUD functionality. 
 
 A user will be able to:
 
@@ -109,15 +109,19 @@ My front-end is written in HTML, CSS and JS. I have used Bootstrap to help make 
 
 ## Testing
 
-I have written tests for my project.
+Tests were written to make sure functionality worked as expected.
 
-The tests have been written using JUnit, Mockito, MockMVC and Selenium.
+The tests have been written using JUnit, Mockito, MockMVC and Selenium as stated above.
 
-Here is an image of my test coverage which came to 85%:
+Here is an image of my test coverage:
 
 ![alt text](https://github.com/JoeWoody97/FootballProject/blob/dev/football_project_files/myTestCoverage.PNG?raw=true)
 
 ## Front-end 
+
+My front-end was completed using HTML, CSS and JavaScript as stated above. I went with a basic design with a table and form.
+
+I also have a modal for updating the teams on the table.
 
 This is an example of what my front end looks like:
 
